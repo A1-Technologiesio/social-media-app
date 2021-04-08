@@ -1,0 +1,10 @@
+{% comment %} create a start up shortcut {% endcomment %}
+source venv/bin/activate && cd socialmediaapp && python3 manage.py runserver localhost:8989
+
+
+
+CREATE USER socialmediaapp WITH PASSWORD 'socialmediaapp';
+ALTER ROLE socialmediaapp SET client_encoding TO 'utf8';
+ALTER ROLE socialmediaapp SET default_transaction_isolation TO 'read committed';
+ALTER ROLE socialmediaapp SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE socialmediaapp TO socialmediaapp;
